@@ -1,0 +1,964 @@
+# 이 viminfo 파일은 빔이 만든 것입니다 Vim 9.0.
+# 조심만 한다면 고칠 수도 있습니다!
+
+# Viminfo version
+|1,4
+
+# 이 파일이 저장되었을 때의 'encoding'의 값
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Last Search Pattern:
+~MSle0~/is
+
+# Last Substitute Search Pattern:
+~MSle0&is
+
+# 마지막으로 바꾼 문자열:
+$are
+
+# 명령 행 히스토리 (새것부터 오래된 것 순):
+:wq
+|2,0,1780889175,,"wq"
+:%d
+|2,0,1780888592,,"%d"
+:wNext
+|2,0,1780887743,,"wNext"
+:q
+|2,0,1780887297,,"q"
+:Wq
+|2,0,1780886909,,"Wq"
+:cq
+|2,0,1779904781,,"cq"
+:q!
+|2,0,1779904624,,"q!"
+:ㅈㅂ
+|2,0,1778386020,,"ㅈㅂ"
+:w1
+|2,0,1778385623,,"w1"
+:WQ
+|2,0,1776274523,,"WQ"
+:.!wq
+|2,0,1775670092,,".!wq"
+:.!q
+|2,0,1775670087,,".!q"
+:1,6 w Savepractice
+|2,0,1775071292,,"1,6 w Savepractice"
+:r practice2
+|2,0,1775070977,,"r practice2"
+:e! practice2
+|2,0,1775070912,,"e! practice2"
+:e practice2
+|2,0,1775070902,,"e practice2"
+:set number
+|2,0,1775070779,,"set number"
+:5
+|2,0,1775070618,,"5"
+:9pu
+|2,0,1775070551,,"9pu"
+:10pu
+|2,0,1775070545,,"10pu"
+:5pu
+|2,0,1775070506,,"5pu"
+:pu yy
+|2,0,1775070483,,"pu yy"
+:yy
+|2,0,1775070463,,"yy"
+:set tabstop
+|2,0,1775070431,,"set tabstop"
+:set showmode
+|2,0,1775070412,,"set showmode"
+:set shell
+|2,0,1775070401,,"set shell"
+:set hlsearch
+|2,0,1775070389,,"set hlsearch"
+:set list
+|2,0,1775070383,,"set list"
+:set ignorecase
+|2,0,1775070372,,"set ignorecase"
+:ignorecase
+|2,0,1775070362,,"ignorecase"
+:hIsearch
+|2,0,1775070351,,"hIsearch"
+:hlsearch
+|2,0,1775070343,,"hlsearch"
+:list
+|2,0,1775070321,,"list"
+:set all
+|2,0,1775070298,,"set all"
+:set
+|2,0,1775070292,,"set"
+:set number autoindent ts=4
+|2,0,1775070280,,"set number autoindent ts=4"
+:set ts=4
+|2,0,1775070258,,"set ts=4"
+:set nonumber
+|2,0,1775070206,,"set nonumber"
+:a3yy
+|2,0,1775070133,,"a3yy"
+:w
+|2,0,1775069852,,"w"
+:1,3 s/is/are
+|2,0,1775069809,,"1,3 s/is/are"
+:J
+|2,0,1775069582,,"J"
+:/\<nice\>
+|2,0,1775069542,,"/\\<nice\\>"
+:/\<and\>
+|2,0,1775069521,,"/\\<and\\>"
+:/nice
+|2,0,1775069478,,"/nice"
+:/is
+|2,0,1775069439,,"/is"
+:/Ther
+|2,0,1775069381,,"/Ther"
+:/weather
+|2,0,1775069361,,"/weather"
+:weather
+|2,0,1775069356,,"weather"
+:a
+|2,0,1775068572,,"a"
+
+# 찾을 문자열 히스토리 (새것부터 오래된 것 순):
+? is
+|2,1,1775069809,,"is"
+? \<nice\>
+|2,1,1775069542,,"\\<nice\\>"
+? \<and\>
+|2,1,1775069521,,"\\<and\\>"
+?/nice
+|2,1,1775069490,47,"nice"
+? nice
+|2,1,1775069478,,"nice"
+?/the
+|2,1,1775069425,47,"the"
+? Ther
+|2,1,1775069381,,"Ther"
+? weather
+|2,1,1775069361,,"weather"
+
+# 표현 히스토리 (새것부터 오래된 것 순):
+
+# 입력 행 히스토리 (새것부터 오래된 것 순):
+
+# 디버그 행 히스토리 (새것부터 오래된 것 순):
+
+# 레지스터:
+"0	LINE	0
+	May I sit here?
+|3,0,0,1,1,0,1775070521,"May I sit here?"
+""1	LINE	0
+	NR == 1 {
+	    subject_count = NF - 2
+	    for (i = 1; i <= NF; i++) {
+	        header[i] = $i
+	    }
+	    printf "%-8s %-8s", header[1], header[2]
+	    for (i = 3; i <= NF; i++) {
+	        printf " %-8s", header[i]
+	    }
+	    printf " %-8s %-8s\n", "총점", "평균"
+	    next
+	}
+	
+	NR > 1 {
+	    sum = 0
+	    printf "%-8s %-8s", $1, $2
+	    for (i = 3; i <= NF; i++) {
+	        printf " %-8d", $i
+	        sum += $i
+	        subj_total[i] += $i
+	    }
+	    avg_str = sprintf("%.1f", sum / subject_count)
+	    printf " %-8d %-8s\n", sum, avg_str
+	    count++
+	}
+	
+	END {
+	    printf "\n"
+	    printf "%-8s %-8s", "", ""
+	    for (i = 3; i <= subject_count + 2; i++) {
+	        subj_avg = sprintf("%.1f", subj_total[i] / count)
+	        printf " %-8s", subj_avg
+	    }
+	    printf "\n"
+	}
+|3,1,1,1,35,0,1780888592,"NR == 1 {","    subject_count = NF - 2","    for (i = 1; i <= NF; i++) {","        header[i] = $i","    }","    printf \"%-8s %-8s\", header[1], header[2]","    for (i = 3; i <= NF; i++) {","        printf \" %-8s\", header[i]","    }","    printf \" %-8s %-8s\\n\", \"총점\", \"평균\"","    next","}","","NR > 1 {","    sum = 0","    printf \"%-8s %-8s\", $1, $2","    for (i = 3; i <= NF; i++) {","        printf \" %-8d\", $i",>19
+|<"        sum += $i","        subj_total[i] += $i","    }","    avg_str = sprintf(\"%.1f\", sum / subject_count)","    printf \" %-8d %-8s\\n\", sum, avg_str","    count++","}","","END {","    printf \"\\n\"","    printf \"%-8s %-8s\", \"\", \"\"","    for (i = 3; i <= subject_count + 2; i++) {","        subj_avg = sprintf(\"%.1f\", subj_total[i] / count)","        printf \" %-8s\", subj_avg","    }","    printf \"\\n\"","}"
+"2	LINE	0
+	NR == 1 {
+	    printf "%-8s %-8s %-6s %-6s %-6s %-6s %-6s\n", $1, $2, $3, $4, $5, "총점", "평균"
+	    next
+	}
+	
+	NR > 1 {
+	    sum = $3 + $4 + $5
+	    avg = sum / 3
+	    avg_str = sprintf("%.1f", avg)
+	    
+	    printf "%-8s %-8s %-6d %-6d %-6d %-10d %-10s\n", $1, $2, $3, $4, $5, sum, avg_str
+	    
+	    kor_total += $3
+	    eng_total += $4
+	    math_total += $5
+	    sum_total += sum
+	    avg_total += avg
+	    count++
+	}
+	
+	END {
+	    kor_avg = sprintf("%.1f", kor_total/count)
+	    eng_avg = sprintf("%.1f", eng_total/count)
+	    math_avg = sprintf("%.1f", math_total/count)
+	    sum_avg = sprintf("%.1f", sum_total/count)
+	    all_avg = sprintf("%.1f", avg_total/count)
+	
+	    printf "\n"
+	    printf "%-8s %-8s %-6s %-6s %-6s %-6s %-6s\n", "", "", kor_avg, eng_avg, math_avg, sum_avg, all_avg
+	}
+|3,0,2,1,30,0,1780886642,"NR == 1 {","    printf \"%-8s %-8s %-6s %-6s %-6s %-6s %-6s\\n\", $1, $2, $3, $4, $5, \"총점\", \"평균\"","    next","}","","NR > 1 {","    sum = $3 + $4 + $5","    avg = sum / 3","    avg_str = sprintf(\"%.1f\", avg)","    ","    printf \"%-8s %-8s %-6d %-6d %-6d %-10d %-10s\\n\", $1, $2, $3, $4, $5, sum, avg_str","    ","    kor_total += $3","    eng_total += $4","    math_total += $5","    sum_total += sum",>22
+|<"    avg_total += avg","    count++","}","","END {","    kor_avg = sprintf(\"%.1f\", kor_total/count)","    eng_avg = sprintf(\"%.1f\", eng_total/count)","    math_avg = sprintf(\"%.1f\", math_total/count)","    sum_avg = sprintf(\"%.1f\", sum_total/count)","    all_avg = sprintf(\"%.1f\", avg_total/count)","","    printf \"\\n\"","    printf \"%-8s %-8s %-6s %-6s %-6s %-6s %-6s\\n\", \"\", \"\", kor_avg, eng_avg, math_avg, sum_avg, all_avg","}"
+"3	LINE	0
+	학번  이름    국어 영어 수학
+	1001  홍길동  80   70    90
+	1010  노가리  80   50    70
+	1011  김철수  95   85    80
+	1012  이영희  70   90    85
+	1013  박민수  60   65    70
+	1014  최지우  88   92    95
+	1015  정우성  75   80    68
+	1016  한지민  90   85    92
+	1017  강호동  82   78    84
+	1018  유재석  95   100   90
+|3,0,3,1,11,0,1780886502,"학번  이름    국어 영어 수학","1001  홍길동  80   70    90","1010  노가리  80   50    70","1011  김철수  95   85    80","1012  이영희  70   90    85","1013  박민수  60   65    70","1014  최지우  88   92    95","1015  정우성  75   80    68","1016  한지민  90   85    92","1017  강호동  82   78    84","1018  유재석  95   100   90"
+"4	LINE	0
+	NR == 1 {
+	    printf "%6s %6s %6s %6s %6s %6s %6s\n", $1, $2, $3, $4, $5, "총점", "평균"
+	    next
+	}
+	
+	NR > 1 {
+	    sum = $3 + $4 + $5
+	    avg = sum / 3
+	    avg_str = sprintf("%.1f", avg)
+	    
+	    printf "%6s %6s %6d %6d %6d %6d %6s\n", $1, $2, $3, $4, $5, sum, avg_str
+	    
+	    kor_total += $3
+	    eng_total += $4
+	    math_total += $5
+	    sum_total += sum
+	    avg_total += avg
+	    count++
+	}
+	
+	END {
+	    kor_avg = sprintf("%.1f", kor_total/count)
+	    eng_avg = sprintf("%.1f", eng_total/count)
+	    math_avg = sprintf("%.1f", math_total/count)
+	    sum_avg = sprintf("%.1f", sum_total/count)
+	    all_avg = sprintf("%.1f", avg_total/count)
+	
+	    printf "\n"
+	    # 앞의 학번, 이름 자리는 빈 문자열("")로 비워두고
+	    # 국어, 영어, 수학, 총점, 평균 자리에 똑같이 %6s 규격을 적용해 수직으로 맞춥니다.
+	    printf "%6s %6s %6s %6s %6s %6s %6s\n", "", "", kor_avg, eng_avg, math_avg, sum_avg, all_avg
+	}
+|3,0,4,1,32,0,1780886383,"NR == 1 {","    printf \"%6s %6s %6s %6s %6s %6s %6s\\n\", $1, $2, $3, $4, $5, \"총점\", \"평균\"","    next","}","","NR > 1 {","    sum = $3 + $4 + $5","    avg = sum / 3","    avg_str = sprintf(\"%.1f\", avg)","    ","    printf \"%6s %6s %6d %6d %6d %6d %6s\\n\", $1, $2, $3, $4, $5, sum, avg_str","    ","    kor_total += $3","    eng_total += $4","    math_total += $5","    sum_total += sum","    avg_total += avg",>13
+|<"    count++","}","","END {","    kor_avg = sprintf(\"%.1f\", kor_total/count)","    eng_avg = sprintf(\"%.1f\", eng_total/count)","    math_avg = sprintf(\"%.1f\", math_total/count)","    sum_avg = sprintf(\"%.1f\", sum_total/count)","    all_avg = sprintf(\"%.1f\", avg_total/count)","","    printf \"\\n\"","    # 앞의 학번, 이름 자리는 빈 문자열(\"\")로 비워두고",>117
+|<"    # 국어, 영어, 수학, 총점, 평균 자리에 똑같이 %6s 규격을 적용해 수직으로 맞춥니다.","    printf \"%6s %6s %6s %6s %6s %6s %6s\\n\", \"\", \"\", kor_avg, eng_avg, math_avg, sum_avg, all_avg","}"
+"5	LINE	0
+	NR == 1 {
+	    printf "%6s %6s %6s %6s %6s %6s %6s\n", $1, $2, $3, $4, $5, "총점", "평균"
+	    next
+	}
+	
+	NR > 1 {
+	    sum = $3 + $4 + $5
+	    avg_str = sprintf("%.1f", sum / 3)
+	    
+	    printf "%6s %6s %6d %6d %6d %6d %6s\n", $1, $2, $3, $4, $5, sum, avg_str
+	    
+	    kor_total += $3
+	    eng_total += $4
+	    math_total += $5
+	    count++
+	}
+	
+	END {
+	    kor_avg = sprintf("%.1f", kor_total/count)
+	    eng_avg = sprintf("%.1f", eng_total/count)
+	    math_avg = sprintf("%.1f", math_total/count)
+	
+	    printf "\n"
+	    # 첫 번째 값을 출력할 때 총 24칸 너비를 확보하여 왼쪽으로 강제 이동시킵니다.
+	    printf "%24s %6s %6s\n", kor_avg, eng_avg, math_avg
+	}
+|3,0,5,1,26,0,1780886243,"NR == 1 {","    printf \"%6s %6s %6s %6s %6s %6s %6s\\n\", $1, $2, $3, $4, $5, \"총점\", \"평균\"","    next","}","","NR > 1 {","    sum = $3 + $4 + $5","    avg_str = sprintf(\"%.1f\", sum / 3)","    ","    printf \"%6s %6s %6d %6d %6d %6d %6s\\n\", $1, $2, $3, $4, $5, sum, avg_str","    ","    kor_total += $3","    eng_total += $4","    math_total += $5","    count++","}","","END {",>50
+|<"    kor_avg = sprintf(\"%.1f\", kor_total/count)","    eng_avg = sprintf(\"%.1f\", eng_total/count)","    math_avg = sprintf(\"%.1f\", math_total/count)","","    printf \"\\n\"","    # 첫 번째 값을 출력할 때 총 24칸 너비를 확보하여 왼쪽으로 강제 이동시킵니다.","    printf \"%24s %6s %6s\\n\", kor_avg, eng_avg, math_avg","}"
+"6	LINE	0
+	NR == 1 {
+	    printf "%6s %6s %6s %6s %6s %6s %6s\n", $1, $2, $3, $4, $5, "총점", "평균"
+	    next
+	}
+	
+	NR > 1 {
+	    sum = $3 + $4 + $5
+	    avg_str = sprintf("%.1f", sum / 3)
+	    
+	    printf "%6s %6s %6d %6d %6d %6d %6s\n", $1, $2, $3, $4, $5, sum, avg_str
+	    
+	    kor_total += $3
+	    eng_total += $4
+	    math_total += $5
+	    count++
+	}
+	
+	END {
+	    kor_avg = sprintf("%.1f", kor_total/count)
+	    eng_avg = sprintf("%.1f", eng_total/count)
+	    math_avg = sprintf("%.1f", math_total/count)
+	
+	    printf "\n"
+	    # 정확한 수동 공백(스페이스 12칸)을 앞에 두어 국어, 영어, 수학 바로 밑에 오게 만듭니다.
+	    printf "            %6s %6s %6s\n", kor_avg, eng_avg, math_avg
+	}
+|3,0,6,1,26,0,1780886057,"NR == 1 {","    printf \"%6s %6s %6s %6s %6s %6s %6s\\n\", $1, $2, $3, $4, $5, \"총점\", \"평균\"","    next","}","","NR > 1 {","    sum = $3 + $4 + $5","    avg_str = sprintf(\"%.1f\", sum / 3)","    ","    printf \"%6s %6s %6d %6d %6d %6d %6s\\n\", $1, $2, $3, $4, $5, sum, avg_str","    ","    kor_total += $3","    eng_total += $4","    math_total += $5","    count++","}","","END {",>50
+|<"    kor_avg = sprintf(\"%.1f\", kor_total/count)","    eng_avg = sprintf(\"%.1f\", eng_total/count)","    math_avg = sprintf(\"%.1f\", math_total/count)","","    printf \"\\n\"","    # 정확한 수동 공백(스페이스 12칸)을 앞에 두어 국어, 영어, 수학 바로 밑에 오게 만듭니다.","    printf \"            %6s %6s %6s\\n\", kor_avg, eng_avg, math_avg","}"
+"7	LINE	0
+	학번	이름	국어	영어	수학
+	1001	홍길동	80	70	90
+	1010	노가리	80	50	70
+	1011	김철수	95	85	80
+	1012	이철구	70	90	85
+	1013	박민수	60	65	70
+	1014	최지우	88   	92    	95
+	1015  	정우성 	75   	80    	68
+	1016  	한지민  90   	85    	92
+	1017  	강호동  82   	78    	84
+	1018  	유재석  95   	100   	90
+|3,0,7,1,11,0,1780885975,"학번	이름	국어	영어	수학","1001	홍길동	80	70	90","1010	노가리	80	50	70","1011	김철수	95	85	80","1012	이철구	70	90	85","1013	박민수	60	65	70","1014	최지우	88   	92    	95","1015  	정우성 	75   	80    	68","1016  	한지민  90   	85    	92","1017  	강호동  82   	78    	84","1018  	유재석  95   	100   	90"
+"8	LINE	0
+	NR == 1 {
+	    printf "%6s %6s %6s %6s %6s %6s %6s\n", $1, $2, $3, $4, $5, "총점", "평균"
+	    next
+	}
+	
+	NR > 1 {
+	    sum = $3 + $4 + $5
+	    avg_str = sprintf("%.1f", sum / 3)
+	    
+	    printf "%6s %6s %6d %6d %6d %6d %6s\n", $1, $2, $3, $4, $5, sum, avg_str
+	    
+	    kor_total += $3
+	    eng_total += $4
+	    math_total += $5
+	    count++
+	}
+	
+	END {
+	    kor_avg = sprintf("%.1f", kor_total/count)
+	    eng_avg = sprintf("%.1f", eng_total/count)
+	    math_avg = sprintf("%.1f", math_total/count)
+	
+	    printf "\n"
+	    # 앞쪽 학번, 이름 자리를 빈칸으로 비워두고, 국어/영어/수학 칸 크기(%6s)에 맞춰 평균값을 출력합니다.
+	    printf "%6s %6s %6s %6s %6s\n", "", "", kor_avg, eng_avg, math_avg
+	}
+|3,0,8,1,26,0,1780885881,"NR == 1 {","    printf \"%6s %6s %6s %6s %6s %6s %6s\\n\", $1, $2, $3, $4, $5, \"총점\", \"평균\"","    next","}","","NR > 1 {","    sum = $3 + $4 + $5","    avg_str = sprintf(\"%.1f\", sum / 3)","    ","    printf \"%6s %6s %6d %6d %6d %6d %6s\\n\", $1, $2, $3, $4, $5, sum, avg_str","    ","    kor_total += $3","    eng_total += $4","    math_total += $5","    count++","}","","END {",>50
+|<"    kor_avg = sprintf(\"%.1f\", kor_total/count)","    eng_avg = sprintf(\"%.1f\", eng_total/count)","    math_avg = sprintf(\"%.1f\", math_total/count)","","    printf \"\\n\"","    # 앞쪽 학번, 이름 자리를 빈칸으로 비워두고, 국어/영어/수학 칸 크기(%6s)에 맞춰 평균값을 출력합니다.","    printf \"%6s %6s %6s %6s %6s\\n\", \"\", \"\", kor_avg, eng_avg, math_avg","}"
+"9	LINE	0
+	NR == 1 {
+	    printf "%6s %6s %6s %6s %6s %6s %6s\n", $1, $2, $3, $4, $5, "총점", "평균"
+	    next
+	}
+	
+	NR > 1 {
+	    sum = $3 + $4 + $5
+	    avg_str = sprintf("%.1f", sum / 3)
+	    
+	    printf "%6s %6s %6d %6d %6d %6d %6s\n", $1, $2, $3, $4, $5, sum, avg_str
+	    
+	    kor_total += $3
+	    eng_total += $4
+	    math_total += $5
+	    count++
+	}
+	
+	END {
+	    kor_avg = sprintf("%.1f", kor_total/count)
+	    eng_avg = sprintf("%.1f", eng_total/count)
+	    math_avg = sprintf("%.1f", math_total/count)
+	
+	    printf "\n"
+	    # 앞쪽 빈칸들을 학생 데이터 폭(6칸씩 6번 = 36칸)만큼 밀고, 마지막 %6s 자리에 평균을 넣습니다.
+	    printf "%36s %6s\n", "국어평균", kor_avg
+	    printf "%36s %6s\n", "영어평균", eng_avg
+	    printf "%36s %6s\n", "수학평균", math_avg
+	}
+|3,0,9,1,28,0,1780885838,"NR == 1 {","    printf \"%6s %6s %6s %6s %6s %6s %6s\\n\", $1, $2, $3, $4, $5, \"총점\", \"평균\"","    next","}","","NR > 1 {","    sum = $3 + $4 + $5","    avg_str = sprintf(\"%.1f\", sum / 3)","    ","    printf \"%6s %6s %6d %6d %6d %6d %6s\\n\", $1, $2, $3, $4, $5, sum, avg_str","    ","    kor_total += $3","    eng_total += $4","    math_total += $5","    count++","}","","END {",>50
+|<"    kor_avg = sprintf(\"%.1f\", kor_total/count)","    eng_avg = sprintf(\"%.1f\", eng_total/count)","    math_avg = sprintf(\"%.1f\", math_total/count)","","    printf \"\\n\"","    # 앞쪽 빈칸들을 학생 데이터 폭(6칸씩 6번 = 36칸)만큼 밀고, 마지막 %6s 자리에 평균을 넣습니다.","    printf \"%36s %6s\\n\", \"국어평균\", kor_avg","    printf \"%36s %6s\\n\", \"영어평균\", eng_avg","    printf \"%36s %6s\\n\", \"수학평균\", math_avg","}"
+"a	LINE	0
+	Can I get a discount?
+	Let me introduce my friend?
+	May I sit here?
+|3,0,10,1,3,0,1775070188,"Can I get a discount?","Let me introduce my friend?","May I sit here?"
+"-	CHAR	0
+	t
+|3,0,36,0,1,0,1775070668,"t"
+
+# 파일 마크:
+'0  30  0  ~/report.awk
+|4,48,30,0,1780889175,"~/report.awk"
+'1  11  29  ~/score.txt
+|4,49,11,29,1780889023,"~/score.txt"
+'2  6  4  ~/words.txt
+|4,50,6,4,1780888806,"~/words.txt"
+'3  18  0  ~/word.pl
+|4,51,18,0,1780888781,"~/word.pl"
+'4  46  0  ~/report2.pl
+|4,52,46,0,1780888640,"~/report2.pl"
+'5  37  0  ~/report2.awk
+|4,53,37,0,1780888596,"~/report2.awk"
+'6  22  0  ~/report.awk
+|4,54,22,0,1780888584,"~/report.awk"
+'7  22  0  ~/report.awk
+|4,55,22,0,1780888584,"~/report.awk"
+'8  1  0  ~/report2.awk
+|4,56,1,0,1780888438,"~/report2.awk"
+'9  35  0  ~/report2.awk
+|4,57,35,0,1780888438,"~/report2.awk"
+
+# 점프목록 (새것이 먼저):
+-'  30  0  ~/report.awk
+|4,39,30,0,1780889175,"~/report.awk"
+-'  22  0  ~/report.awk
+|4,39,22,0,1780889029,"~/report.awk"
+-'  11  29  ~/score.txt
+|4,39,11,29,1780889023,"~/score.txt"
+-'  11  29  ~/score.txt
+|4,39,11,29,1780889023,"~/score.txt"
+-'  6  4  ~/words.txt
+|4,39,6,4,1780888806,"~/words.txt"
+-'  6  4  ~/words.txt
+|4,39,6,4,1780888806,"~/words.txt"
+-'  6  4  ~/words.txt
+|4,39,6,4,1780888806,"~/words.txt"
+-'  6  4  ~/words.txt
+|4,39,6,4,1780888806,"~/words.txt"
+-'  1  0  ~/words.txt
+|4,39,1,0,1780888799,"~/words.txt"
+-'  1  0  ~/words.txt
+|4,39,1,0,1780888799,"~/words.txt"
+-'  1  0  ~/words.txt
+|4,39,1,0,1780888799,"~/words.txt"
+-'  1  0  ~/words.txt
+|4,39,1,0,1780888799,"~/words.txt"
+-'  18  0  ~/word.pl
+|4,39,18,0,1780888781,"~/word.pl"
+-'  18  0  ~/word.pl
+|4,39,18,0,1780888781,"~/word.pl"
+-'  18  0  ~/word.pl
+|4,39,18,0,1780888781,"~/word.pl"
+-'  18  0  ~/word.pl
+|4,39,18,0,1780888781,"~/word.pl"
+-'  18  0  ~/word.pl
+|4,39,18,0,1780888781,"~/word.pl"
+-'  18  0  ~/word.pl
+|4,39,18,0,1780888781,"~/word.pl"
+-'  18  0  ~/word.pl
+|4,39,18,0,1780888781,"~/word.pl"
+-'  18  0  ~/word.pl
+|4,39,18,0,1780888781,"~/word.pl"
+-'  1  0  ~/word.pl
+|4,39,1,0,1780888772,"~/word.pl"
+-'  1  0  ~/word.pl
+|4,39,1,0,1780888772,"~/word.pl"
+-'  1  0  ~/word.pl
+|4,39,1,0,1780888772,"~/word.pl"
+-'  1  0  ~/word.pl
+|4,39,1,0,1780888772,"~/word.pl"
+-'  1  0  ~/word.pl
+|4,39,1,0,1780888772,"~/word.pl"
+-'  1  0  ~/word.pl
+|4,39,1,0,1780888772,"~/word.pl"
+-'  1  0  ~/word.pl
+|4,39,1,0,1780888772,"~/word.pl"
+-'  1  0  ~/word.pl
+|4,39,1,0,1780888772,"~/word.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  46  0  ~/report2.pl
+|4,39,46,0,1780888640,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  1  0  ~/report2.pl
+|4,39,1,0,1780888625,"~/report2.pl"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  37  0  ~/report2.awk
+|4,39,37,0,1780888596,"~/report2.awk"
+-'  1  0  ~/report2.awk
+|4,39,1,0,1780888592,"~/report2.awk"
+-'  1  0  ~/report2.awk
+|4,39,1,0,1780888592,"~/report2.awk"
+-'  1  0  ~/report2.awk
+|4,39,1,0,1780888592,"~/report2.awk"
+-'  1  0  ~/report2.awk
+|4,39,1,0,1780888592,"~/report2.awk"
+-'  1  0  ~/report2.awk
+|4,39,1,0,1780888592,"~/report2.awk"
+-'  1  0  ~/report2.awk
+|4,39,1,0,1780888592,"~/report2.awk"
+-'  1  0  ~/report2.awk
+|4,39,1,0,1780888592,"~/report2.awk"
+-'  1  0  ~/report2.awk
+|4,39,1,0,1780888592,"~/report2.awk"
+
+# 파일내의 마크 히스토리 (새것부터 오래된 순):
+
+> ~/report.awk
+	*	1780889174	0
+	"	30	0
+	^	29	23
+	.	29	22
+	+	1	450
+	+	1	9
+	+	1	0
+	+	1	9
+	+	30	0
+	+	11	20
+	+	12	0
+	+	11	40
+	+	29	15
+	+	30	0
+	+	29	22
+
+> ~/score.txt
+	*	1780889022	0
+	"	11	29
+	^	11	30
+	.	11	29
+	+	1	29
+	+	1	27
+	+	1	30
+	+	1	22
+	+	1	28
+	+	1	22
+	+	1	17
+	+	1	6
+	+	1	18
+	+	1	40
+	+	1	29
+	+	1	40
+	+	11	29
+
+> ~/words.txt
+	*	1780888805	0
+	"	6	4
+	^	6	5
+	.	6	4
+	+	6	4
+
+> ~/word.pl
+	*	1780888780	0
+	"	18	0
+	^	18	1
+	.	18	0
+	+	18	0
+
+> ~/report2.pl
+	*	1780888637	0
+	"	46	0
+	^	46	1
+	.	46	0
+	+	46	0
+
+> ~/report2.awk
+	*	1780888595	0
+	"	37	0
+	^	37	1
+	.	37	0
+	+	1	9
+	+	37	0
+
+> ~/github_info
+	*	1779905888	0
+	"	1	70
+	^	1	71
+	.	1	71
+	+	1	71
+
+> ~/test2.txt
+	*	1779904778	0
+	"	1	0
+
+> ~/test1.txt
+	*	1779904725	0
+	"	1	0
+
+> ~/safe_editor
+	*	1779904667	0
+	"	38	1
+	^	38	2
+	.	38	1
+	+	19	10
+	+	20	0
+	+	38	1
+
+> /safe_editor
+	*	1779904621	0
+	"	38	1
+	^	38	2
+	.	38	1
+	+	19	10
+	+	20	0
+	+	38	1
+
+> ~/test.txt
+	*	1779903885	0
+	"	1	0
+
+> ~/safe
+	*	1779903683	0
+	"	13	1
+	^	38	2
+	.	38	1
+	+	19	10
+	+	20	0
+	+	38	1
+
+> ~/longest
+	*	1779903302	0
+	"	17	3
+	^	17	4
+	.	17	3
+	+	17	3
+
+> ~/file2.txt
+	*	1779902807	0
+	"	1	31
+	^	1	32
+	.	1	31
+	+	1	31
+
+> ~/add
+	*	1779902119	0
+	"	3	4
+	^	3	5
+	.	3	4
+	+	3	0
+	+	1	4
+	+	1	42
+	+	1	10
+	+	8	8
+	+	3	4
+
+> ~/filetype
+	*	1779900613	0
+	"	35	0
+	^	35	1
+	.	34	0
+	+	1	659
+	+	1	190
+	+	1	194
+	+	1	262
+	+	1	328
+	+	1	391
+	+	1	454
+	+	1	518
+	+	1	578
+	+	1	627
+	+	1	609
+	+	1	208
+	+	1	258
+	+	1	276
+	+	1	324
+	+	1	342
+	+	1	387
+	+	1	405
+	+	1	450
+	+	1	468
+	+	1	514
+	+	1	532
+	+	1	574
+	+	1	652
+	+	1	75
+	+	1	128
+	+	1	71
+	+	1	75
+	+	1	121
+	+	1	4
+	+	1	418
+	+	1	1
+	+	1	11
+	+	35	1
+	+	7	4
+	+	9	0
+	+	14	0
+	+	17	0
+	+	20	0
+	+	23	0
+	+	26	0
+	+	29	0
+	+	32	0
+	+	34	0
+
+> ~/score
+	*	1778386020	0
+	"	3	9
+	^	3	10
+	.	3	10
+	+	3	10
+
+> ~/score2
+	*	1778385751	0
+	"	3	9
+	^	3	10
+	.	3	10
+	+	3	13
+	+	4	0
+	+	3	10
+
+> ~/xdata
+	*	1778382301	0
+	"	8	17
+	^	8	18
+	.	9	0
+	+	9	0
+
+> ~/sed4.sh
+	*	1777910062	0
+	"	5	0
+	^	5	0
+	.	5	0
+	+	2	5
+	+	6	0
+	+	4	0
+	+	5	0
+
+> ~/sed1
+	*	1777909346	0
+	"	3	14
+	^	3	15
+	.	3	14
+	+	1	3
+	+	3	14
+
+> ~/sed2
+	*	1777909282	0
+	"	1	0
+	^	1	1
+	.	1	1
+	+	1	1
+
+> ~/re.data
+	*	1777907040	0
+	"	3	43
+	^	3	44
+	.	3	43
+	+	3	43
+
+> ~/ex15.sh
+	*	1776274521	0
+	"	11	15
+	^	11	16
+	.	11	16
+	+	2	10
+	+	10	35
+	+	12	34
+	+	14	0
+	+	10	29
+	+	11	16
+
+> ~/.bash_profile
+	*	1776272453	0
+	"	5	18
+	^	5	19
+	.	6	0
+	+	5	19
+	+	6	0
+
+> ~/arg.c
+	*	1775670239	0
+	"	8	0
+	^	8	1
+	.	8	0
+	+	2	32
+	+	3	68
+	+	3	96
+	+	3	87
+	+	3	33
+	+	3	95
+	+	3	67
+	+	3	34
+	+	3	96
+	+	8	0
+
+> ~/u24245089-3b
+	*	1775071530	0
+	"	1	0
+
+> ~/Savepractice
+	*	1775071506	0
+	"	1	0
+
+> ~/u24245089-3a
+	*	1775071467	0
+	"	1	0
+
+> ~/practice
+	*	1775071458	0
+	"	1	0
+	^	14	0
+	.	2	0
+	+	1	120
+	+	1	18
+	+	1	38
+	+	6	29
+	+	6	0
+	+	1	20
+	+	6	15
+	+	1	19
+	+	6	0
+	+	13	12
+	+	1	0
+	+	8	1
+	+	9	0
+	+	8	2
+	+	10	0
+	+	14	0
+	+	13	0
+	+	9	2
+	+	10	3
+	+	13	3
+	+	14	0
+	+	15	0
+	+	2	0
+	b	8	0
+
+> ~/practice2
+	*	1775070946	0
+	"	4	22
+	^	4	23
+	.	4	22
+	+	3	38
+	+	4	22

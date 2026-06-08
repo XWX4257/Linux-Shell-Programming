@@ -1,0 +1,5 @@
+# HSTS 1.0 Known Hosts database for GNU Wget.
+# Edit at your own risk.
+# <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
+himath114.tistory.com	0	1	1778689566	31536000
+www.linuxfoundation.org	0	0	1778690030	31536000
